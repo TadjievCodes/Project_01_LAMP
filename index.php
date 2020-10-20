@@ -11,7 +11,7 @@
 <?php
     // start session
     session_start();
-
+    
     // create the email session variable if not already created
     if(!isset($_SESSION["email"])){
         $_SESSION["email"] = null;
