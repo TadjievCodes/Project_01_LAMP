@@ -3,7 +3,7 @@
     // open the session first of all
     session_start();
     // get the submitted email and assign it to the session email variable
-    if(isset($_GET["email"])){
+      if(isset($_GET["email"])){
         $_SESSION["email"] = $_GET["email"];
     }
 
@@ -35,10 +35,10 @@
               
               <!-- Special in built PHP method  htmlspecialchars($_SERVER['HTTP_REFERER']); in order to go back to the previous page where is the form-->
  <!-- use the HTTP_REFERER, sanitize it, and echo it out via PHP below--> 
-   <?php
-  $url = htmlspecialchars($_SERVER['HTTP_REFERER']);
-  echo "<a href='$url' style='color:white;'>Back to the Form</a>"; 
-?>
+                   <?php
+                       $url = htmlspecialchars($_SERVER['HTTP_REFERER']);
+                       echo "<a href='$url' style='color:white;'>Back to the Form</a>"; 
+                  ?>
 
 
             </div>
