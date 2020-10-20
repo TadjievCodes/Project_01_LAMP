@@ -55,7 +55,7 @@
             <?php
                 echo "<input type='email' id='email' size='40' name='email' value='" . $_SESSION["email"] . "'/>";
             ?>
-            <small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
+            <small id="emailHelp" class="form-text">We'll never share your email with anyone else</small>
             <button type="submit" class="btn btn-primary">Begin</button> 
             
         </form>
