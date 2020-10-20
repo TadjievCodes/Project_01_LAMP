@@ -6,6 +6,7 @@
     if(isset($_GET["email"])){
         $_SESSION["email"] = $_GET["email"];
     }
+
 ?>
 
 
@@ -23,7 +24,7 @@
                     <?php
                         // this targets the email textbox and fills it in with the email that was previously entered
                         if(isset($_SESSION["email"])){
-                            echo "Coming soon, <font style='color:#e5383b'>" . $_SESSION["email"] . "</font>!";
+                            echo "Coming soon, <h3 class='warnRed'>" . $_SESSION["email"] . "</h3>";
                         }
                         else{
                             echo 'Coming soon!';

@@ -10,12 +10,17 @@
 
 <?php
     // start session
+
     session_start();
     
     // create the email session variable if not already created
     if(!isset($_SESSION["email"])){
         $_SESSION["email"] = null;
     }
+
+
+    // In case if you want to reset everything
+   //session_unset();
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +41,7 @@
         <?php
             // this draws the email text input box and fills it in with the email that was previously entered
             if(isset($_SESSION["email"])){
-                echo "Welcome back to the pizza Web App again, <font style='color:#e5383b'>" . $_SESSION["email"] . "</font>!";
+                echo "<h1>Welcome back to the pizza Web App again </h1> <h3 class='warnRed'> " . $_SESSION["email"] . " </h3>";
             }
             else{
                 echo 'Welcome to the Pizza Ordering Web App';
@@ -48,7 +53,7 @@
         <form action="orderPizza.php">
             <label for="email">Email:</label>
             <?php
-                echo "<input type='email' id='email' name='email' value='" . $_SESSION["email"] . "'/>";
+                echo "<input type='email' id='email' size='40' name='email' value='" . $_SESSION["email"] . "'/>";
             ?>
             <small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
             <button type="submit" class="btn btn-primary">Begin</button> 
